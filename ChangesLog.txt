@@ -1,0 +1,7 @@
+10 April 2008
+   released version 0.6.0 of time_logger
+
+     Change log:
+        -Applied: New interface - moe suitable for touch screen
+        -Applied: New database structure - therefore this version is not compatible with 0.5.0 version database
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith
+END
+db_set_panel.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith/db_set_panel.wxs
+END
+settings.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith/settings.wxs
+END
+prog_set_panel.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith/prog_set_panel.wxs
+END
+login.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith/login.wxs
+END
+time_loggerframe.wxs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/etm/!svn/ver/2/timelogger/trunk/wxsmith/time_loggerframe.wxs
+END

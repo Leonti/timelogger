@@ -1,0 +1,185 @@
+# Time Logger - time tracking. Part of ETM.
+# Copyright (C) 2008 Leonti Bielski
+# This file is distributed under the same license as the PACKAGE package.
+# Leonti Bielski <prishelec@gmail.com>, 2008.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.6.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-04-27 19:14+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Leonti Bielski <prishelec@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: db_set_panel.cpp:52
+msgid "Please edit this setting before connecting to the database."
+msgstr "Por favor preencha todos os campos antes de se conectar á BD"
+
+#: db_set_panel.cpp:55
+msgid "Host"
+msgstr "Servidor"
+
+#: db_set_panel.cpp:59
+msgid "User"
+msgstr "Utilizador"
+
+#: db_set_panel.cpp:63
+msgid "Password"
+msgstr "Password"
+
+#: db_set_panel.cpp:67
+msgid "Database name"
+msgstr "Base de dados"
+
+#: db_set_panel.cpp:72
+msgid "Show this dialog on next startup"
+msgstr "Aparecer da próxima vez que iniciar o programa."
+
+#: login.cpp:61
+msgid "Choose job:"
+msgstr "Seleccione o cargo."
+
+#: login.cpp:65
+msgid "LOGOUT"
+msgstr "Sair"
+
+#: login.cpp:69
+msgid "Close"
+msgstr "Fechar"
+
+#: login.cpp:92
+msgid "Welcome, "
+msgstr "Bem vindo,"
+
+#: login.cpp:101
+msgid "Position: "
+msgstr "Posição:"
+
+#: login.cpp:151
+msgid "OFF"
+msgstr "Sair"
+
+#: login.cpp:164
+msgid "You are already working as a "
+msgstr "Já está a trabalhar como "
+
+#: login.cpp:164
+msgid "! Choose another job or logout. Otherwise press \"Close\"."
+msgstr "Escolha um novo cargo ou saia. De outro modo precione \"Sair\"."
+
+#: login.cpp:164 login.cpp:191
+msgid "Wrong choice"
+msgstr "Escolha errada"
+
+#: login.cpp:176
+msgid "Your current position is "
+msgstr "A sua posição é "
+
+#: login.cpp:176
+msgid "Login"
+msgstr "Entrar"
+
+#: login.cpp:191
+msgid "You are already off! Choose job or press \"Close\"."
+msgstr "Já saiu! Escolha o cargo ou precione \"Sair\"."
+
+#: login.cpp:203
+msgid "You logged out. Enjoy your time off!"
+msgstr "Saiu, resto de bom dia"
+
+#: login.cpp:203
+msgid "Logout"
+msgstr "Sair"
+
+#: prog_set_panel.cpp:46
+msgid "Appearance"
+msgstr ""
+
+#: prog_set_panel.cpp:48
+msgid "Language:"
+msgstr "Lingua"
+
+#: prog_set_panel.cpp:52
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: prog_set_panel.cpp:53
+msgid "Polish"
+msgstr "Polaco"
+
+#: prog_set_panel.cpp:54
+msgid "Russian"
+msgstr "Russo"
+
+#: settings.cpp:43
+msgid "Settings"
+msgstr "Configuração"
+
+#: settings.cpp:51
+msgid "Save"
+msgstr "Guardar"
+
+#: settings.cpp:53 time_loggerMain.cpp:182
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: settings.cpp:82
+msgid "Database"
+msgstr "Base de dados"
+
+#: settings.cpp:88
+msgid "Program settings"
+msgstr "Configuração do programa"
+
+#: time_loggerMain.cpp:110
+msgid "Time Logger"
+msgstr "Time Logger"
+
+#: time_loggerMain.cpp:126
+msgid "Current time:"
+msgstr "Hora actual"
+
+#: time_loggerMain.cpp:177
+msgid "<--"
+msgstr "<--"
+
+#: time_loggerMain.cpp:187
+msgid "Enter"
+msgstr "Entrar"
+
+#: time_loggerMain.cpp:270
+msgid "Connected to the database."
+msgstr "Conectado á base de dados"
+
+#: time_loggerMain.cpp:276
+msgid "Unable no connect to database '"
+msgstr "Impossivel ligar á base de dados"
+
+#: time_loggerMain.cpp:276
+msgid "' on "
+msgstr "' ligado "
+
+#: time_loggerMain.cpp:278
+msgid "Unable to connect to the database. Reason:\n"
+msgstr "Impossivel ligar á base de dados. Razão:\n"
+
+#: time_loggerMain.cpp:278
+msgid "Not connected."
+msgstr "Desligado"
+
+#: time_loggerMain.cpp:384
+msgid "Sorry, but there is no such ID in our database."
+msgstr "Desculpa, mas não existe esse ID na base de dados"
+
+#: time_loggerMain.cpp:384
+msgid "Wrong ID"
+msgstr "ID errado"
+
+msgid "Portuguese"
+msgstr "Português"
+

@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src
+END
+time_loggerApp.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/time_loggerApp.cpp
+END
+settings.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/settings.cpp
+END
+prog_set_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/prog_set_panel.cpp
+END
+time_loggerMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/time_loggerMain.cpp
+END
+messages.po
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/messages.po
+END
+time_loggerApp.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/time_loggerApp.h
+END
+settings.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/settings.h
+END
+prog_set_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/prog_set_panel.h
+END
+time_loggerMain.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/time_loggerMain.h
+END
+wx_std.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/wx_std.cpp
+END
+login.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/login.cpp
+END
+wx_std.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/wx_std.h
+END
+login.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/login.h
+END
+db_set_panel.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/db_set_panel.cpp
+END
+db_set_panel.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/db_set_panel.h
+END
+version.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/version.h
+END
+timelogger.po
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/etm/!svn/ver/2/timelogger/trunk/src/timelogger.po
+END
