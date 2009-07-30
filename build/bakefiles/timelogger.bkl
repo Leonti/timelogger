@@ -25,6 +25,7 @@
 <if cond = "TARGETING_WIN32=='0'">
 <include>/usr/include/mysql</include>
 <include>/usr/local/include/mysql++</include>
+<include>/usr/include/mysql++</include>
 </if>
 
 <if cond = "TARGETING_WIN32=='1'">
@@ -53,5 +54,19 @@ locale/pt/LC_MESSAGES/timelogger.mo
 </files>
 			<install-to>$(DATADIR)</install-to>
 		</data-files-tree>
+<data-files>
+<files>
+timelogger.desktop
+</files>
+<install-to>$(DATADIR)/applications</install-to>
+</data-files>
+
+<data-files>
+<files>
+timelogger.png
+</files>
+<install-to>$(DATADIR)/pixmaps</install-to>
+</data-files>
+
 </if>
         </makefile> 

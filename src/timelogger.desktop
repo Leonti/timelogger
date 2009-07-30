@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+GenericName=Time Logger for ETM system
+Name=Time Logger
+Exec=timelogger
+Icon=timelogger
+Terminal=false
+Type=Application
+Categories=Utility;X-SuSE-TimeUtility;
