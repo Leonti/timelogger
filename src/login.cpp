@@ -108,7 +108,7 @@ StaticText2->SetLabel(_("Position: ") + getJobName(jobId));
 mysqlpp::Row row;
 mysqlpp::StoreQueryResult::size_type i;
 for (i = 0; i < res.num_rows(); ++i) {
-
+  row = res[i];
          int jobIdTemp = int(row["job_id"]);
 
                 wxString b_name = _T("button_id_");

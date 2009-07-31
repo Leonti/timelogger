@@ -3409,3 +3409,156 @@
 
 1242670532 /usr/include/wx-2.8/wx/unix/stdpaths.h
 
+1209998412 source:/home/leonti/usa/timelogger/src/db_set_panel.cpp
+	"db_set_panel.h"
+	<wx/string.h>
+	<wx/intl.h>
+
+1209998412 /home/leonti/usa/timelogger/src/db_set_panel.h
+	<wx/checkbox.h>
+	<wx/sizer.h>
+	<wx/panel.h>
+	<wx/stattext.h>
+	<wx/textctrl.h>
+	<wx/msgdlg.h>
+	<wx/config.h>
+	<string>
+	<mysql++.h>
+	<iostream>
+	"wx_std.h"
+
+1209998412 /home/leonti/usa/timelogger/src/wx_std.h
+	<string>
+	<wx/string.h>
+
+1219340908 source:/home/leonti/usa/timelogger/src/prog_set_panel.cpp
+	"prog_set_panel.h"
+	<wx/string.h>
+	<wx/intl.h>
+
+1209998412 /home/leonti/usa/timelogger/src/prog_set_panel.h
+	<wx/sizer.h>
+	<wx/panel.h>
+	<wx/stattext.h>
+	<wx/choice.h>
+	<wx/config.h>
+	<wx/msgdlg.h>
+
+1209998412 source:/home/leonti/usa/timelogger/src/settings.cpp
+	"settings.h"
+	<wx/string.h>
+	<wx/intl.h>
+
+1209998412 /home/leonti/usa/timelogger/src/settings.h
+	<wx/dialog.h>
+	<wx/sizer.h>
+	<wx/notebook.h>
+	<wx/button.h>
+	<wx/statline.h>
+	"db_set_panel.h"
+	"prog_set_panel.h"
+	<wx/config.h>
+	<wx/dialog.h>
+	<mysql++.h>
+
+1209998412 source:/home/leonti/usa/timelogger/src/time_loggerApp.cpp
+	"time_loggerApp.h"
+	"time_loggerMain.h"
+	<wx/image.h>
+
+1209998412 /home/leonti/usa/timelogger/src/time_loggerApp.h
+	<wx/app.h>
+
+1209998412 /home/leonti/usa/timelogger/src/time_loggerMain.h
+	<wx/sizer.h>
+	<wx/button.h>
+	<wx/statusbr.h>
+	<wx/frame.h>
+	<wx/stattext.h>
+	<wx/timer.h>
+	"login.h"
+	<fstream>
+	"wx_std.h"
+	"settings.h"
+	<string>
+	<mysql++.h>
+	<iostream>
+	"wx_std.h"
+	<wx/msgdlg.h>
+	<wx/stdpaths.h>
+
+1209998412 /home/leonti/usa/timelogger/src/login.h
+	<wx/dialog.h>
+	<wx/sizer.h>
+	<wx/button.h>
+	<wx/stattext.h>
+	<wx/msgdlg.h>
+	<string>
+	<mysql++.h>
+	<iostream>
+	"wx_std.h"
+	<wx/msgdlg.h>
+
+1248124167 source:/home/leonti/usa/timelogger/src/time_loggerMain.cpp
+	"time_loggerMain.h"
+	"version.h"
+	<wx/msgdlg.h>
+	<wx/config.h>
+	<wx/string.h>
+	<wx/intl.h>
+	<wx/font.h>
+	<wx/bitmap.h>
+	<wx/image.h>
+	<wx/artprov.h>
+
+1209998412 /home/leonti/usa/timelogger/src/version.h
+
+1242670532 /usr/include/wx-2.8/wx/bitmap.h
+	"wx/string.h"
+	"wx/gdicmn.h"
+	"wx/colour.h"
+	"wx/variant.h"
+	"wx/palmos/bitmap.h"
+	"wx/msw/bitmap.h"
+	"wx/x11/bitmap.h"
+	"wx/gtk/bitmap.h"
+	"wx/gtk1/bitmap.h"
+	"wx/x11/bitmap.h"
+	"wx/mgl/bitmap.h"
+	"wx/dfb/bitmap.h"
+	"wx/mac/bitmap.h"
+	"wx/cocoa/bitmap.h"
+	"wx/os2/bitmap.h"
+	"wx/generic/mask.h"
+
+1242670533 /usr/include/wx-2.8/wx/gtk/bitmap.h
+
+1242670532 /usr/include/wx-2.8/wx/artprov.h
+	"wx/string.h"
+	"wx/bitmap.h"
+	"wx/icon.h"
+
+1242670532 /usr/include/wx-2.8/wx/icon.h
+	"wx/iconloc.h"
+	"wx/generic/icon.h"
+	"wx/msw/icon.h"
+	"wx/motif/icon.h"
+	"wx/generic/icon.h"
+	"wx/generic/icon.h"
+	"wx/generic/icon.h"
+	"wx/generic/icon.h"
+	"wx/generic/icon.h"
+	"wx/mac/icon.h"
+	"wx/cocoa/icon.h"
+	"wx/os2/icon.h"
+	"wx/variant.h"
+
+1242670532 /usr/include/wx-2.8/wx/iconloc.h
+	"wx/string.h"
+
+1242670533 /usr/include/wx-2.8/wx/generic/icon.h
+	"wx/bitmap.h"
+
+1209998412 source:/home/leonti/usa/timelogger/src/wx_std.cpp
+	"wx_std.h"
+
