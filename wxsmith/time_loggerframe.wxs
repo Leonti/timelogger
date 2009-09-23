@@ -99,7 +99,7 @@
 							<rows>1</rows>
 							<object class="sizeritem">
 								<object class="wxGridSizer" variable="GridSizer1" member="no">
-									<cols>3</cols>
+									<cols>4</cols>
 									<rows>3</rows>
 									<vgap>10</vgap>
 									<hgap>10</hgap>
@@ -155,6 +155,11 @@
 										<border>5</border>
 										<option>1</option>
 									</object>
+									<object class="spacer">
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
 									<object class="sizeritem">
 										<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
 											<label>4</label>
@@ -206,6 +211,11 @@
 										<border>5</border>
 										<option>1</option>
 									</object>
+									<object class="spacer">
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
 									<object class="sizeritem">
 										<object class="wxButton" name="ID_BUTTON7" variable="Button7" member="yes">
 											<label>7</label>
@@ -252,6 +262,23 @@
 												<face>Sans</face>
 											</font>
 											<handler function="OnButton9Click" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_BUTTON13" variable="Button13" member="yes">
+											<label>0</label>
+											<font>
+												<size>56</size>
+												<style>normal</style>
+												<weight>normal</weight>
+												<underlined>0</underlined>
+												<family>swiss</family>
+												<face>Sans</face>
+											</font>
+											<handler function="OnButton13Click1" entry="EVT_BUTTON" />
 										</object>
 										<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>

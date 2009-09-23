@@ -29,6 +29,7 @@
 #include <wx/intl.h>
 #include <wx/font.h>
 #include <wx/bitmap.h>
+#include <wx/icon.h>
 #include <wx/image.h>
 #include <wx/artprov.h>
 //*)
@@ -75,6 +76,7 @@ const long time_loggerFrame::ID_BUTTON6 = wxNewId();
 const long time_loggerFrame::ID_BUTTON7 = wxNewId();
 const long time_loggerFrame::ID_BUTTON8 = wxNewId();
 const long time_loggerFrame::ID_BUTTON9 = wxNewId();
+const long time_loggerFrame::ID_BUTTON13 = wxNewId();
 const long time_loggerFrame::ID_BUTTON10 = wxNewId();
 const long time_loggerFrame::ID_BUTTON11 = wxNewId();
 const long time_loggerFrame::ID_BUTTON12 = wxNewId();
@@ -134,7 +136,7 @@ readSet();
     BoxSizer1->Add(FlexGridSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     FlexGridSizer1->Add(BoxSizer1, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     FlexGridSizer2 = new wxFlexGridSizer(1, 2, 0, 0);
-    GridSizer1 = new wxGridSizer(3, 3, 10, 10);
+    GridSizer1 = new wxGridSizer(3, 4, 10, 10);
     Button1 = new wxButton(this, ID_BUTTON1, _("1"), wxDefaultPosition, wxSize(170,170), 0, wxDefaultValidator, _T("ID_BUTTON1"));
     wxFont Button1Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button1->SetFont(Button1Font);
@@ -147,6 +149,7 @@ readSet();
     wxFont Button3Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button3->SetFont(Button3Font);
     GridSizer1->Add(Button3, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    GridSizer1->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button4 = new wxButton(this, ID_BUTTON4, _("4"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
     wxFont Button4Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button4->SetFont(Button4Font);
@@ -159,6 +162,7 @@ readSet();
     wxFont Button6Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button6->SetFont(Button6Font);
     GridSizer1->Add(Button6, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    GridSizer1->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button7 = new wxButton(this, ID_BUTTON7, _("7"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON7"));
     wxFont Button7Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button7->SetFont(Button7Font);
@@ -171,6 +175,10 @@ readSet();
     wxFont Button9Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     Button9->SetFont(Button9Font);
     GridSizer1->Add(Button9, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    Button13 = new wxButton(this, ID_BUTTON13, _("0"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON13"));
+    wxFont Button13Font(56,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
+    Button13->SetFont(Button13Font);
+    GridSizer1->Add(Button13, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     FlexGridSizer2->Add(GridSizer1, 1, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 20);
     FlexGridSizer3 = new wxFlexGridSizer(5, 1, 0, 0);
     Button10 = new wxButton(this, ID_BUTTON10, _("<--"), wxDefaultPosition, wxSize(170,85), 0, wxDefaultValidator, _T("ID_BUTTON10"));
@@ -211,6 +219,7 @@ readSet();
     Connect(ID_BUTTON7,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton7Click);
     Connect(ID_BUTTON8,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton8Click);
     Connect(ID_BUTTON9,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton9Click);
+    Connect(ID_BUTTON13,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton13Click1);
     Connect(ID_BUTTON10,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton12Click);
     Connect(ID_BUTTON11,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton13Click);
     Connect(ID_BUTTON12,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&time_loggerFrame::OnButton11Click);
@@ -423,4 +432,10 @@ void time_loggerFrame::OnTimer1Trigger(wxTimerEvent& event)
 {
     wxDateTime currentTime = wxDateTime::Now();
     StaticText3->SetLabel(currentTime.FormatTime());
+}
+
+void time_loggerFrame::OnButton13Click1(wxCommandEvent& event)
+{
+            if(StaticText1->GetLabel().Length() < 4)
+    StaticText1->SetLabel(StaticText1->GetLabel() + _T("0"));
 }

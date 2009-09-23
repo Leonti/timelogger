@@ -44,7 +44,7 @@ login::login(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& siz
     //(*Initialize(login)
     wxFlexGridSizer* FlexGridSizer1;
     wxStaticBoxSizer* StaticBoxSizer1;
-
+    
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
     SetClientSize(wxDefaultSize);
     Move(wxDefaultPosition);
@@ -74,7 +74,7 @@ login::login(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& siz
     SetSizer(GridSizer1);
     GridSizer1->Fit(this);
     GridSizer1->SetSizeHints(this);
-
+    
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&login::OnButton2Click);
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&login::OnButton3Click);
     //*)

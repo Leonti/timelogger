@@ -66,6 +66,8 @@ class time_loggerFrame: public wxFrame
         void OnButton12Click(wxCommandEvent& event);
         void OnButton13Click(wxCommandEvent& event);
         void OnTimer1Trigger(wxTimerEvent& event);
+        void OnButton13Click1(wxCommandEvent& event);
+        void OnButton13Click2(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(time_loggerFrame)
@@ -81,6 +83,7 @@ class time_loggerFrame: public wxFrame
         static const long ID_BUTTON7;
         static const long ID_BUTTON8;
         static const long ID_BUTTON9;
+        static const long ID_BUTTON13;
         static const long ID_BUTTON10;
         static const long ID_BUTTON11;
         static const long ID_BUTTON12;
@@ -105,6 +108,7 @@ class time_loggerFrame: public wxFrame
         wxButton* Button11;
         wxButton* Button7;
         wxButton* Button6;
+        wxButton* Button13;
         wxButton* Button10;
         //*)
         wxConfig *config;

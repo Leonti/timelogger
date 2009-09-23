@@ -7,32 +7,32 @@
 	<File name="src/db_set_panel.h" open="0" top="0" tabpos="8">
 		<Cursor position="1565" topLine="0" />
 	</File>
-	<File name="src/login.cpp" open="1" top="1" tabpos="1">
+	<File name="src/login.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="5480" topLine="98" />
 	</File>
 	<File name="src/login.h" open="0" top="0" tabpos="9">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src/prog_set_panel.cpp" open="1" top="0" tabpos="3">
+	<File name="src/prog_set_panel.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="1961" topLine="26" />
 	</File>
 	<File name="src/prog_set_panel.h" open="0" top="0" tabpos="6">
 		<Cursor position="2721" topLine="47" />
 	</File>
-	<File name="src/settings.cpp" open="1" top="0" tabpos="4">
+	<File name="src/settings.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="4197" topLine="81" />
 	</File>
 	<File name="src/settings.h" open="0" top="0" tabpos="4">
 		<Cursor position="2413" topLine="48" />
 	</File>
-	<File name="src/time_loggerApp.cpp" open="1" top="0" tabpos="5">
+	<File name="src/time_loggerApp.cpp" open="0" top="0" tabpos="5">
 		<Cursor position="1666" topLine="15" />
 	</File>
 	<File name="src/time_loggerApp.h" open="0" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src/time_loggerMain.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="17058" topLine="18" />
+	<File name="src/time_loggerMain.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="19377" topLine="408" />
 	</File>
 	<File name="src/time_loggerMain.h" open="0" top="0" tabpos="2">
 		<Cursor position="4385" topLine="92" />
@@ -40,7 +40,7 @@
 	<File name="src/version.h" open="0" top="0" tabpos="2">
 		<Cursor position="0" topLine="3" />
 	</File>
-	<File name="src/wx_std.cpp" open="1" top="0" tabpos="6">
+	<File name="src/wx_std.cpp" open="0" top="0" tabpos="6">
 		<Cursor position="1136" topLine="2" />
 	</File>
 	<File name="src/wx_std.h" open="0" top="0" tabpos="13">
