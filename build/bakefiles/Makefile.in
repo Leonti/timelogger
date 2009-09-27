@@ -62,6 +62,8 @@ COND_PLATFORM_OS2_1___timelogger___os2_emxbindcmd = $(NM) timelogger$(EXEEXT) \
 all: timelogger$(EXEEXT)
 
 install: install_timelogger
+	$(INSTALL_DIR) $(DESTDIR)$(datadir)/timelogger
+	(cd $(srcdir)/src ; $(INSTALL_DATA)  ../share/timelogger/photo.png $(DESTDIR)$(datadir)/timelogger)
 	$(INSTALL_DIR) $(DESTDIR)$(datadir)
 	for f in locale/pl/LC_MESSAGES/timelogger.mo locale/es/LC_MESSAGES/timelogger.mo locale/ru/LC_MESSAGES/timelogger.mo locale/pt/LC_MESSAGES/timelogger.mo; do \
 	if test ! -d $(DESTDIR)$(datadir)/`dirname $$f` ; then \
@@ -75,6 +77,7 @@ install: install_timelogger
 	(cd $(srcdir)/src ; $(INSTALL_DATA)  timelogger.png $(DESTDIR)$(datadir)/pixmaps)
 
 uninstall: uninstall_timelogger
+	(cd $(DESTDIR)$(datadir)/timelogger ; rm -f photo.png)
 	for f in locale/pl/LC_MESSAGES/timelogger.mo locale/es/LC_MESSAGES/timelogger.mo locale/ru/LC_MESSAGES/timelogger.mo locale/pt/LC_MESSAGES/timelogger.mo; do \
 	rm -f $(DESTDIR)$(datadir)/$$f; \
 	done

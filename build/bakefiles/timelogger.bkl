@@ -44,6 +44,12 @@
 <install-to>$(BINDIR)</install-to>
                 </exe>
 <if cond = "TARGETING_WIN32=='0'">
+		<data-files>
+			<files>
+../share/timelogger/photo.png
+</files>
+			<install-to>$(DATADIR)/timelogger</install-to>
+		</data-files>
 		<data-files-tree>
 <srcdir>share</srcdir>
 			<files>

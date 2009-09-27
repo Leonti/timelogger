@@ -32,6 +32,11 @@
 #include <iostream>
 #include "wx_std.h"
 #include <wx/msgdlg.h>
+#include <wx/stdpaths.h>
+#include <wx/filename.h>
+#include <wx/dcclient.h>
+#include <wx/image.h>
+//#include <sstream>
 
 class login: public wxDialog
 {
@@ -43,6 +48,7 @@ public:
     //(*Identifiers(login)
     static const long ID_STATICTEXT1;
     static const long ID_STATICTEXT2;
+    static const long ID_WIND1;
     static const long ID_BUTTON1;
     static const long ID_BUTTON2;
     //*)
@@ -56,17 +62,21 @@ protected:
     //(*Handlers(login)
     void OnButton2Click(wxCommandEvent& event);
     void OnButton3Click(wxCommandEvent& event);
+    void OnImage1Paint(wxPaintEvent& event);
     //*)
     void OnButton(wxCommandEvent& event);
 
     //(*Declarations(login)
     wxGridSizer* GridSizer1;
     wxFlexGridSizer* FlexGridSizer2;
+    wxWindow* Image1;
     wxButton* Button1;
     wxButton* Button2;
     wxStaticText* StaticText1;
     wxStaticText* StaticText2;
     //*)
+    wxClientDC* photoDC;
+    wxWindow* photoWindow;
 
 private:
 

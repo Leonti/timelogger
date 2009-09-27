@@ -30,6 +30,7 @@
 //(*IdInit(login)
 const long login::ID_STATICTEXT1 = wxNewId();
 const long login::ID_STATICTEXT2 = wxNewId();
+const long login::ID_WIND1 = wxNewId();
 const long login::ID_BUTTON1 = wxNewId();
 const long login::ID_BUTTON2 = wxNewId();
 //*)
@@ -43,23 +44,32 @@ login::login(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& siz
 {
     //(*Initialize(login)
     wxFlexGridSizer* FlexGridSizer1;
+    wxFlexGridSizer* FlexGridSizer4;
+    wxFlexGridSizer* FlexGridSizer3;
     wxStaticBoxSizer* StaticBoxSizer1;
-    
+
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
     SetClientSize(wxDefaultSize);
     Move(wxDefaultPosition);
     GridSizer1 = new wxGridSizer(1, 1, 0, 0);
     FlexGridSizer1 = new wxFlexGridSizer(5, 1, 0, 0);
+    FlexGridSizer3 = new wxFlexGridSizer(0, 3, 0, 0);
+    FlexGridSizer4 = new wxFlexGridSizer(2, 1, 0, 0);
     StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Welcome, Preved Medvedov!"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
     wxFont StaticText1Font(22,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     StaticText1->SetFont(StaticText1Font);
-    FlexGridSizer1->Add(StaticText1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer4->Add(StaticText1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("Position: Groundskeeping"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
     wxFont StaticText2Font(20,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
     StaticText2->SetFont(StaticText2Font);
-    FlexGridSizer1->Add(StaticText2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer4->Add(StaticText2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer3->Add(FlexGridSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    Image1 = new wxWindow(this,ID_WIND1);
+    Image1 -> SetSize(200,200);
+    FlexGridSizer3->Add(Image1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    FlexGridSizer1->Add(FlexGridSizer3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     StaticBoxSizer1 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Choose job:"));
-    FlexGridSizer2 = new wxFlexGridSizer(4, 0, 0, 0);
+    FlexGridSizer2 = new wxFlexGridSizer(2, 0, 0, 0);
     StaticBoxSizer1->Add(FlexGridSizer2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     FlexGridSizer1->Add(StaticBoxSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     Button1 = new wxButton(this, ID_BUTTON1, _("LOGOUT"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
@@ -74,10 +84,13 @@ login::login(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& siz
     SetSizer(GridSizer1);
     GridSizer1->Fit(this);
     GridSizer1->SetSizeHints(this);
-    
+
+    Image1->Connect(wxEVT_PAINT,(wxObjectEventFunction)&login::OnImage1Paint,0,this);
     Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&login::OnButton2Click);
     Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&login::OnButton3Click);
     //*)
+
+    //		Image1 -> SetSize(200,200); //paste above
 }
 
 login::~login()
@@ -215,3 +228,46 @@ void login::OnButton3Click(wxCommandEvent& event)
 
 
 
+
+void login::OnImage1Paint(wxPaintEvent& event)
+{
+        wxStandardPaths path;
+wxFileName imageName;
+imageName.Assign(path.GetDataDir(),_T("photo.png"));
+        wxImage img(imageName.GetFullPath(),wxBITMAP_TYPE_PNG);
+    photoWindow = FindWindow(ID_WIND1);
+    photoDC = new wxClientDC(photoWindow);
+
+    wxPoint p=photoWindow->GetPosition();
+    wxSize sz=photoWindow->GetClientSize();
+    photoDC -> DrawBitmap(img.Scale(sz.GetWidth(),sz.GetHeight()),0,0,false);
+
+                mysqlpp::Query query = conn->query();
+        query << "SELECT `photo` FROM `employees` WHERE `emp_id`=" << empId << " LIMIT 1";
+        mysqlpp::StoreQueryResult res = query.store();
+        if (res)
+        {
+            mysqlpp::Row row = res.at(0);
+    wxPoint p=photoWindow->GetPosition();
+    wxSize sz=photoWindow->GetClientSize();
+mysqlpp::Row::reference it = row["photo"];
+int length = it.length();
+                    if(length != 0){
+const char* str = it.data();
+
+unsigned char * NewImgData = ( unsigned char * ) malloc( length );
+
+    memcpy( NewImgData, str, length );
+    wxImage img(200,200,NewImgData);
+    photoDC -> DrawBitmap(img.Scale(sz.GetWidth(),sz.GetHeight()),0,0,false);
+}/*else{
+wxStandardPaths path;
+wxFileName imageName;
+imageName.Assign(path.GetDataDir(),_T("photo.png"));
+
+    wxImage img(imageName.GetFullPath(),wxBITMAP_TYPE_PNG);
+    photoDC -> Clear();
+    photoDC -> DrawBitmap(img.Scale(sz.GetWidth(),sz.GetHeight()),0,0,false);
+    photoDC -> DrawText(_("No photo"), 10, 10);
+} */}
+}
