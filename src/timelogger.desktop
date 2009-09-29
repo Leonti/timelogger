@@ -7,3 +7,4 @@ Icon=timelogger
 Terminal=false
 Type=Application
 Categories=Utility;X-SuSE-TimeUtility;
+X-SuSE-translate=false

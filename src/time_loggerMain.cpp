@@ -397,6 +397,7 @@ if(StaticText1->GetLabel()==_T("9999")){
 }
 
 int time_loggerFrame::getEmployeeId(){
+    int toRet;
     mysqlpp::Query query = conn->query();
     query << "SELECT `emp_id`, `emp_name` FROM `employees` WHERE `emp_ssn` ="<< wx2std(StaticText1->GetLabel(),wxConvUI) <<" LIMIT 1";
     mysqlpp::StoreQueryResult res = query.store();
@@ -405,12 +406,13 @@ if(res){
         mysqlpp::Row row = res.at(0);
         empId = int(row["emp_id"]);
         empName = std2wx(std::string(row["emp_name"]), wxConvUI);
-return 0;
+toRet = 0;
 }
 }else{
         empId = 0;
-return 1;
+toRet = 1;
 }
+return toRet;
     }
 
 void time_loggerFrame::OnButton12Click(wxCommandEvent& event)

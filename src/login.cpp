@@ -152,18 +152,19 @@ if(jobId == 0){
 
 
 wxString login::getJobName(int jobId){
+    wxString toRet;
     if(jobId != 0){
     mysqlpp::Query query = conn->query();
     query << "SELECT `job_title` FROM `jobs` WHERE `job_id`="<< jobId <<" LIMIT 1";
     mysqlpp::StoreQueryResult res = query.store();
 if(res){
     mysqlpp::Row row = res.at(0);
-    return std2wx(std::string(row["job_title"]),wxConvUI);
+    toRet = std2wx(std::string(row["job_title"]),wxConvUI);
     }
     }else{
-    return _("OFF");
+    toRet = _("OFF");
         }
-
+return toRet;
     }
 
 
