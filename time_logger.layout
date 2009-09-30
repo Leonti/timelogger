@@ -7,8 +7,8 @@
 	<File name="src/db_set_panel.h" open="0" top="0" tabpos="8">
 		<Cursor position="1565" topLine="0" />
 	</File>
-	<File name="src/login.cpp" open="1" top="1" tabpos="1">
-		<Cursor position="3702" topLine="55" />
+	<File name="src/login.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="7538" topLine="150" />
 	</File>
 	<File name="src/login.h" open="1" top="0" tabpos="2">
 		<Cursor position="1938" topLine="42" />
@@ -31,8 +31,8 @@
 	<File name="src/time_loggerApp.h" open="0" top="0" tabpos="11">
 		<Cursor position="0" topLine="0" />
 	</File>
-	<File name="src/time_loggerMain.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="17889" topLine="368" />
+	<File name="src/time_loggerMain.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="18886" topLine="397" />
 	</File>
 	<File name="src/time_loggerMain.h" open="0" top="0" tabpos="2">
 		<Cursor position="4385" topLine="92" />
