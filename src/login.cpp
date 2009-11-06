@@ -236,7 +236,7 @@ void login::OnImage1Paint(wxPaintEvent& event)
 wxFileName imageName;
 imageName.Assign(path.GetDataDir(),_T("photo.png"));
         wxImage img(imageName.GetFullPath(),wxBITMAP_TYPE_PNG);
-    photoWindow = FindWindow(ID_WIND1);
+    photoWindow = FindWindowById(ID_WIND1);
     photoDC = new wxClientDC(photoWindow);
 
     wxPoint p=photoWindow->GetPosition();
